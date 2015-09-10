@@ -1,0 +1,32 @@
+[general]
+accounts = Gmail
+maxsyncaccounts = 3
+ui = Blinkenlights
+status_backend = sqlite
+#pythonfile = ~/.offlineimap.py
+
+[Account Gmail]
+localrepository  = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Maildir
+
+[Repository Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = dustin.neuman@gmail.com
+remotepass = trixie is a little bixie!
+remoteport = 993
+#remotepasseval = get_password_emacs("imap.gmail.com", "dustin.neuman@gmail.com", "993")
+ssl        = yes
+sslcacertfile = /etc/openssl/cert.pem
+maxconnections = 1
+realdelete = no
+folderfilter = lambda foldername: foldername not in ['Unroll.me', 
+                                                  '[Gmail].Spam',
+                                                    ]
+socktimeout = 90
+autorefresh = 30
+
