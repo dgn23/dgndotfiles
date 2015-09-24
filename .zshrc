@@ -18,3 +18,10 @@ for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+alias thanks = echo 'no doubt, homie'
+alias gah    = echo 'ack!'
+alias fuck!!!=echo 'take a deep breath and step away; nothing here is worth getting worked up over.'
+
